@@ -47,7 +47,7 @@ function squareRootsTests() {
     console.log(((roots.length == 1) && (roots[0] == 1)) ? 'пройден' : 'НЕ ПРОЙДЕН!')
 }
 
-function start() {
+function startFindSquareRoots() {
     let a = Number(prompt('Введите a')),
         b = Number(prompt('Введите b')),
         c = Number(prompt('Введите c')),
