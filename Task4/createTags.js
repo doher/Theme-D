@@ -15,28 +15,36 @@ document.body.appendChild(div);
 function createTag() {
     const div = document.createElement('div'),
         button = document.createElement('button'),
-        tag = document.getElementById('tagInput').value,
-        divArray = document.getElementsByClassName('tag') || [];
+        span = document.createElement('span'),
+        tag = document.getElementById('tagInput').value.trim(),
+        spanArray = document.getElementsByTagName('span');
 
     if (tag) {
         button.setAttribute('onclick', 'removeTag(this)');
         div.setAttribute('class', 'tag');
         button.innerHTML = 'x';
+        span.innerHTML = tag;
 
-        div.innerHTML = tag;
+        div.appendChild(span);
         div.appendChild(button);
 
-        // for (let i = 0; i < divArray.length; ++i) {
+        if (spanArray.length) {
+            let isExist = false;
 
-        //     if (divArray[i].textContent == tag) {
+            for (let i = 0; i < spanArray.length; ++i) {
+                if (spanArray[i].textContent === tag) {
+                    isExist = true;
+                }
+            }
+
+            if (!isExist) {
                 document.body.appendChild(div);
-        //     }
-        // }
-    }
+            }
 
-    console.log(div.textContent);
-    console.log(divArray.length);
-    console.log(divArray[0].textContent);
+        } else {
+            document.body.appendChild(div);
+        }
+    }
 
     document.getElementById('tagInput').value = '';
 }
