@@ -1,0 +1,22 @@
+
+.tag {
+    background-color:dodgerblue;
+    float: left;
+    position: relative;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    margin: 2px 2px 2px 0px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span {
+    margin: 2px;
+}
+
+.tag > button {
+    border: 0px;
+    background-color: dodgerblue;
+    color: white;
+    margin: 0px 0px 2px 0px;
+}

@@ -5,6 +5,7 @@ const div = document.createElement('div'),
 input.setAttribute('type', 'text');
 input.setAttribute('id', 'tagInput');
 input.setAttribute('value', '');
+button.setAttribute('class', 'buttonInput');
 button.setAttribute('onclick', 'createTag()');
 button.innerHTML = 'add tag';
 
